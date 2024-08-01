@@ -9,12 +9,12 @@ import java.io.IOException;
 import org.junit.jupiter.api.Test;
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class InfrastructureStackTest {
+class InfrastructureStackTest {
     private final static ObjectMapper JSON =
         new ObjectMapper().configure(SerializationFeature.INDENT_OUTPUT, true);
 
     @Test
-    public void testStack() throws IOException {
+    void testStack() throws IOException {
         App app = new App();
         InfrastructureStack stack = new InfrastructureStack(app, "test");
 
